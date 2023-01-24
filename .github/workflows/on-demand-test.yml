@@ -26,9 +26,22 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ inputs.branch }}
+      
+      - name: "source helper"
+        run: |
+          a() { 
+            echo "hello world"; 
+          }
+          a
+
+
 
       - name: "install dependencies"
-        run: sudo ./misc/install-deps.sh -y
+        run: |
+          a
+          # foldable start install_dependencies "Install uftrace dependencies..."
+          sudo ./misc/install-deps.sh -y
+          # foldable end install_dependencies
 
       - name: "configure build env"
         run: ./configure
