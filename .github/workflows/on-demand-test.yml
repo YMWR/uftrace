@@ -20,7 +20,6 @@ on:
 
 jobs:
   run-uftrace-tests:
-    if: github.repository == 'namhyung/uftrace'
     runs-on: ubuntu-latest
     steps:
       - name: "checkout"
