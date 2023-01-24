@@ -20,7 +20,7 @@ on:
 
 jobs:
   run-uftrace-tests:
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-latest, arm64]
     steps:
       - name: "checkout"
         uses: actions/checkout@v3
